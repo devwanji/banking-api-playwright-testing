@@ -52,3 +52,11 @@ amplifytools.xcconfig
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+# Postman local credentials and test reports
+/postman/environments/
+/postman/reports/
+# Postman generated/local files
+/.postman/
+/pm-results/
+/test-results/

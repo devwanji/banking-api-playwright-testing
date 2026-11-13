@@ -1,0 +1,47 @@
+$kind: http-request
+name: POST /graphql
+url: "{{baseUrl}}/graphql"
+method: POST
+body:
+  type: graphql
+  content:
+    query: "query {\r
+
+      \  listBankAccount {\r
+
+      \    id\r
+
+      \    uuid\r
+
+      \    userId\r
+
+      \    createdAt\r
+
+      \  }\r
+
+      }"
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test("GraphQL request returns 200", function () {
+          pm.response.to.have.status(200);
+      });
+
+      pm.test("GraphQL response has data", function () {
+          const response = pm.response.json();
+          pm.expect(response).to.have.property("data");
+      });
+
+      pm.test("Bank accounts are returned", function () {
+          const response = pm.response.json();
+          pm.expect(response.data.listBankAccount).to.be.an("array");
+          pm.expect(response.data.listBankAccount.length).to.be.greaterThan(0);
+      });
+
+      pm.test("Bank account has an ID", function () {
+          const response = pm.response.json();
+          pm.expect(response.data.listBankAccount[0].id).to.exist;
+      });
+    language: text/javascript
+examples: ./.resources/POST -graphql.resources/examples
+order: 3000

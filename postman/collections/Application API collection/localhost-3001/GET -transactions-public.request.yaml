@@ -1,0 +1,31 @@
+$kind: http-request
+name: GET /transactions/public
+url: "{{baseUrl}}/transactions/public"
+method: GET
+body:
+  type: text
+  content: ""
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test("Transactions request returns 200", function () {
+          pm.response.to.have.status(200);
+      });
+
+      pm.test("Response contains transaction data", function () {
+          const response = pm.response.json();
+          pm.expect(response).to.exist;
+      });
+
+      pm.test("Response time is below 3000ms", function () {
+          pm.expect(pm.response.responseTime).to.be.below(3000);
+      });
+
+      pm.test("Page data is present", function () {
+          const response = pm.response.json();
+          pm.expect(response).to.have.property("pageData");
+          pm.expect(response.pageData).to.be.an("object");
+      });
+    language: text/javascript
+examples: ./.resources/GET -transactions-public.resources/examples
+order: 4000

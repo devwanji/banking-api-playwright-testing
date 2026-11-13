@@ -1,0 +1,26 @@
+$kind: http-example
+name: 200 GET http://localhost:3001/transactions/public
+request:
+  url: http://localhost:3001/transactions/public
+  method: GET
+  body:
+    type: text
+    content: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    access-control-allow-credentials: "true"
+    access-control-allow-origin: http://localhost:3000
+    connection: keep-alive
+    content-length: "6997"
+    content-type: application/json; charset=utf-8
+    date: Thu, 12 Nov 2026 18:51:41 GMT
+    etag: W/"1b55-8O+syzW3r9yrU2oajXnztEOEgsQ"
+    keep-alive: timeout=5
+    vary: Origin
+    x-powered-by: Express
+  body:
+    type: text
+    content: ""
+order: 1000

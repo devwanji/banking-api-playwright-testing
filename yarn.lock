@@ -3188,10 +3188,42 @@
   resolved "https://registry.yarnpkg.com/@pkgjs/parseargs/-/parseargs-0.11.0.tgz#a77ea742fab25775145434eb1d2328cf5013ac33"
   integrity sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==
 
+"@playwright/test@^1.65.0":
+  version "1.65.0"
+  resolved "https://registry.yarnpkg.com/@playwright/test/-/test-1.65.0.tgz#11038333bcbe91badadbb1dbf0449d252c754f2e"
+  integrity sha512-iGURLGuKDLakSEl7Pgfv8h7f+XLT+V861Wfhz0zlEl5nyFuKUopdkFBPKqTllTUp06aOwPuH8iuUEb3yp3MpbQ==
+  dependencies:
+    playwright "1.65.0"
+
 "@popperjs/core@^2.11.8":
   version "2.11.8"
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.8.tgz#6b79032e760a0899cd4204710beede972a3a185f"
   integrity sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==
+
+"@postman/pm-bin-linux-arm64@1.88.0":
+  version "1.88.0"
+  resolved "https://registry.yarnpkg.com/@postman/pm-bin-linux-arm64/-/pm-bin-linux-arm64-1.88.0.tgz#965cdcc7d9fcac86b4b936632f859953d586a0b5"
+  integrity sha512-7pRThNR6wjkvAHmPkVN5S/4QHcABdfRMsLEzf8A/7dRIQdYRZIkoe7z6/E0Qz6f/e7ny+gd/gyxYOXt0k46Mdw==
+
+"@postman/pm-bin-linux-x64@1.88.0":
+  version "1.88.0"
+  resolved "https://registry.yarnpkg.com/@postman/pm-bin-linux-x64/-/pm-bin-linux-x64-1.88.0.tgz#e19e03a1a21c6c3d4e4fd6ee20922e1107ca5e3b"
+  integrity sha512-vzLYsUxZlp1LlAj4Bf3Zoit0xyxGWQGSXp9kzh47MZfgXVyTMUd1g0VwRRLSgAsLUO74Xl0OZp73uWmZzq/PKw==
+
+"@postman/pm-bin-macos-arm64@1.88.0":
+  version "1.88.0"
+  resolved "https://registry.yarnpkg.com/@postman/pm-bin-macos-arm64/-/pm-bin-macos-arm64-1.88.0.tgz#64bfffa9b1c6e16717b649ce29617ba597dfcc58"
+  integrity sha512-5Tazm2QPNB3/crwRfm6xgF6a27Q31Asbo908c2nkrnMXic1KXm0v5RM60Xw9+TDwcpr9ArWppdwf9U0CklqxgA==
+
+"@postman/pm-bin-macos-x64@1.88.0":
+  version "1.88.0"
+  resolved "https://registry.yarnpkg.com/@postman/pm-bin-macos-x64/-/pm-bin-macos-x64-1.88.0.tgz#8169ec90f564c8f05045cca76fc40d598c6990f1"
+  integrity sha512-byzKg/dXj00sGZIybXAW5/BSJmXGnTDKN6bVLTcMJPVx8PwgFgVhwoyGGTT8ncj3hmwMLbSjVtYM2v3AommqoQ==
+
+"@postman/pm-bin-windows-x64@1.88.0":
+  version "1.88.0"
+  resolved "https://registry.yarnpkg.com/@postman/pm-bin-windows-x64/-/pm-bin-windows-x64-1.88.0.tgz#ed1872373520acd2b7de433dd48b7e1da8b4239b"
+  integrity sha512-nUij0ae3ENI/qBTOYZs4C6Fq7freXvy3GDlEP6ncBoVaxpkO1NU5rOSqfYdC5KHWF8zFc+hMfeSGup1RwczCtw==
 
 "@rolldown/binding-android-arm-eabi@1.2.6":
   version "1.2.6"
@@ -10557,6 +10589,18 @@ pkg-dir@^4.1.0:
   dependencies:
     find-up "^4.0.0"
 
+playwright-core@1.65.0:
+  version "1.65.0"
+  resolved "https://registry.yarnpkg.com/playwright-core/-/playwright-core-1.65.0.tgz#2b4671949db79c6ea47facf09f4aeffb90bc5c7f"
+  integrity sha512-vNSKgH6YqtN7cdT/L334zo0a+YwkrpicyrHJlWWPIm/Q+Nn2SWInil01oT0mbu96U4GgoRtCYQD9CzJQgju+lA==
+
+playwright@1.65.0:
+  version "1.65.0"
+  resolved "https://registry.yarnpkg.com/playwright/-/playwright-1.65.0.tgz#d890f700bf7a04b42cbdc4baab8d0e16b1d73f41"
+  integrity sha512-F3AMWcR44qMBt4kq+6Kb6mX7bjGXshktKFOPULd7reED6ZJWevjbNRqysP7q+AATE9kdPEZBibex1BYsvpVoeA==
+  dependencies:
+    playwright-core "1.65.0"
+
 posix-character-classes@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/posix-character-classes/-/posix-character-classes-0.1.1.tgz#01eac0fe3b5af71a2a6c02feabb8c1fef7e00eab"
@@ -10597,6 +10641,22 @@ postinstall-postinstall@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/postinstall-postinstall/-/postinstall-postinstall-2.1.0.tgz#4f7f77441ef539d1512c40bd04c71b06a4704ca3"
   integrity sha512-7hQX6ZlZXIoRiWNrbMQaLzUUfH+sSx39u8EJ9HYuDc1kLo9IXKWjM5RSquZN1ad5GnH8CGFM78fsAAQi3OKEEQ==
+
+postman-cli@^1.88.0:
+  version "1.88.0"
+  resolved "https://registry.yarnpkg.com/postman-cli/-/postman-cli-1.88.0.tgz#f310697477f2f8e4fa72fd808df00c32cfc85368"
+  integrity sha512-5sVrXFP2apVexWgndYuFfmjZdHmEQK0ry3MJOOJey2287Kqosq5x9fwwoW2IphjolqfN3lJNc86x6AdbBIoo4A==
+  optionalDependencies:
+    "@postman/pm-bin-linux-arm64" "1.88.0"
+    "@postman/pm-bin-linux-x64" "1.88.0"
+    "@postman/pm-bin-macos-arm64" "1.88.0"
+    "@postman/pm-bin-macos-x64" "1.88.0"
+    "@postman/pm-bin-windows-x64" "1.88.0"
+
+postman-playwright@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/postman-playwright/-/postman-playwright-1.1.2.tgz#afcdb5fd4ab2233ed64b6875d454db51d6e908da"
+  integrity sha512-fICLZlsTBE+TWa34LXIOVKcLkqoaTJhaWmODggxZH1S3rqCcAKjCIWMeq1YJ/7Empm7hTdWyJLOgnkjQNXy6mw==
 
 prelude-ls@^1.2.1:
   version "1.2.1"

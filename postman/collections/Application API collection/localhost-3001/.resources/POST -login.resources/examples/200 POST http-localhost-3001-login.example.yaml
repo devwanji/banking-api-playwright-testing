@@ -1,0 +1,26 @@
+$kind: http-example
+name: 200 POST http://localhost:3001/login
+request:
+  url: http://localhost:3001/login
+  method: POST
+  body:
+    type: text
+    content: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    access-control-allow-credentials: "true"
+    access-control-allow-origin: http://localhost:3000
+    connection: keep-alive
+    content-length: "462"
+    content-type: application/json; charset=utf-8
+    date: Thu, 12 Nov 2026 18:51:39 GMT
+    etag: W/"1ce-EGHaUfoOWXXMRjfPmOfCjBcEXBI"
+    keep-alive: timeout=5
+        vary: Origin
+    x-powered-by: Express
+  body:
+    type: text
+    content: ""
+order: 1000

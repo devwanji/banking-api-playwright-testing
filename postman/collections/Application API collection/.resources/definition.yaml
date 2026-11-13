@@ -1,0 +1,27 @@
+$kind: collection
+description: Collection generated from captured network traffic, organised by host.
+variables:
+  loginCaseIndex: ""
+scripts:
+  - type: http:beforeRequest
+    code: "console.log(\"Starting API test:\", pm.info.requestName);\r
+
+      console.log(\"Request URL:\", pm.request.url.toString());\r
+
+      console.log(\"HTTP Method:\", pm.request.method);"
+    language: text/javascript
+  - type: http:afterResponse
+    code: "pm.test(\"API response time is below 3 seconds\", function () {\r
+
+      \    pm.expect(pm.response.responseTime).to.be.below(3000);\r
+
+      });\r
+
+      \r
+
+      pm.test(\"API request returns a successful response\", function () {\r
+
+      \    pm.expect(pm.response.code).to.be.within(200, 299);\r
+
+      });"
+    language: text/javascript
