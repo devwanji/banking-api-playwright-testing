@@ -32,6 +32,17 @@ jobs:
       - name: Wait for application
         run: npx wait-on http://localhost:3000 http://localhost:3001
 
+      - name: Run Postman API tests
+        run: |
+          npx postman collection run "postman/collections/Application API collection" \
+            --env-var "baseUrl=http://localhost:3001" \
+            --env-var "username=$BANKING_USERNAME" \
+            --env-var "password=$BANKING_PASSWORD" \
+            --env-var "expectedStatus=200"
+        env:
+          BANKING_USERNAME: ${{ secrets.BANKING_USERNAME }}
+          BANKING_PASSWORD: ${{ secrets.BANKING_PASSWORD }}
+
       - name: Run Playwright tests
         run: npx playwright test
         env:

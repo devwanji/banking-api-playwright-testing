@@ -4,13 +4,11 @@ url: "{{baseUrl}}/login"
 method: POST
 body:
   type: json
-  content: "{\r
-
-    \  \"username\": \"{{username}}\",\r
-
-    \  \"password\": \"{{password}}\"\r
-
-    }"
+  content: |-
+    {
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
 scripts:
   - type: afterResponse
     code: |-
@@ -23,27 +21,6 @@ scripts:
       pm.test("Response time is acceptable", function () {
           pm.expect(pm.response.responseTime).to.be.below(3000);
       });
-    language: text/javascript
- 
-      pm.collectionVariables.set(\r
-
-      \    \"loginCaseIndex\",\r
-
-      \    (index + 1) % testCases.length\r
-
-      );\r
-
-      \r
-
-      pm.variables.set(\"testUsername\", currentCase.username);\r
-
-      pm.variables.set(\"testPassword\", currentCase.password);\r
-
-      pm.environment.set(\"expectedStatus\", currentCase.expectedStatus);\r
-
-      \r
-
-      console.log(\"Testing login case:\", index + 1);"
     language: text/javascript
 examples: ./.resources/POST -login.resources/examples
 order: 1000
